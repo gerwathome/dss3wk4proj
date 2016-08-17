@@ -200,6 +200,14 @@ write.table(colnames(final_df),"var_names.txt", row.names=FALSE,
 #     and then Activity to make it easier to read.
 
 write.table(final_df,"dss3wk4proj.txt",row.names=FALSE)
+
 # Because of the long variable names. it is a little easier to look at in a
 #     spreadsheet where the column names may be word wrapped
 write.csv(final_df,"dss3wk4proj.csv",row.names=FALSE)
+
+check_df <- read.table("dss3wk4proj.txt",header=TRUE, stringsAsFactors = FALSE)
+
+# write.csv(check_df,"ck_dss3wk4proj.csv",row.names=FALSE)
+# View(check_df)
+# the csv files written from the final_df and the check_df are identical
+
